@@ -1,0 +1,52 @@
+# Select image from https://hub.docker.com/_/php/
+image: php:7.0-cli
+
+# Select what we should cache
+cache:
+  paths:
+  - vendor/
+
+before_script:
+# Install git, the php image doesn't have installed
+- apt-get update -yqq
+- apt-get install libmagickcore-dev libmagickwand-dev libmagic-dev libtool -yqq
+- apt-get install git zip libbz2-dev libc-client-dev libkrb5-dev libxml2-dev -yqq
+- apt-get install zlib1g-dev libicu-dev g++ postgresql postgresql-contrib libpq-dev -yqq
+- apt-get install subversion -yqq
+- rm -r /var/lib/apt/lists/*
+- pecl install imagick
+
+# Install docker extensions
+- docker-php-ext-enable imagick
+- docker-php-ext-install pdo_mysql
+- docker-php-ext-install gettext
+- docker-php-ext-configure imap --with-kerberos --with-imap-ssl
+- docker-php-ext-install imap
+- docker-php-ext-install soap
+- docker-php-ext-install bz2
+- docker-php-ext-install pgsql
+- docker-php-ext-install pdo_pgsql
+- docker-php-ext-install mysqli
+- docker-php-ext-configure intl
+- docker-php-ext-install intl
+
+# Install composer
+- curl -sS https://getcomposer.org/installer | php
+
+# Install all project dependencies
+- php composer.phar install
+
+services:
+- mysql
+
+variables:
+  # Configure mysql service (https://hub.docker.com/_/mysql/)
+  MYSQL_DATABASE: mysql
+  MYSQL_ROOT_PASSWORD: root
+
+# We test PHP7 with MySQL, but we allow it to fail
+test:php7:mysql:
+  image: php:7
+  script:
+  - vendor/bin/phpunit --configuration phpunit_mysql.xml
+  allow_failure: true
