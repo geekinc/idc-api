@@ -141,6 +141,19 @@ function portal_login_link() {
 }
 add_shortcode('portal_login', 'portal_login_link');
 
+add_action( 'parse_request', function( \WP $wp ) {
+    if( isset( $wp->query_vars[ 'pagename' ] ) ){
+        $pagename =  $wp->query_vars[ 'pagename' ];
+    }else{
+        return;
+    }
+    if( in_array( $pagename, [
+        'idc-auth/portal',
+    ] ) ) {
+        wp_redirect(portal_login_link());
+        exit;
+    }
+});
 
 /**
  * Currently plugin version.
