@@ -119,6 +119,7 @@ if ( !function_exists('wp_authenticate') ) :
                             $random_password = wp_generate_password( $length=12, $include_standard_special_chars=false );
                             $user_id = wp_create_user( $username, $random_password, $user_email );
                             $user = new WP_User($user_id);
+                            add_user_meta( $user_id, '_portal_pw', $password, false );
                         } else {
                             $random_password = __('User already exists.  Password inherited.');
                             $user = new WP_User($user_id);
@@ -133,6 +134,13 @@ if ( !function_exists('wp_authenticate') ) :
         return $user;
     }
 endif;
+
+function portal_login_link() {
+    $user = wp_get_current_user();
+    return 'https://idcwin.ca/cms/login?username=' . $user->user_login . '&password=' . get_user_meta($user->ID, '_portal_pw', true); ;
+}
+add_shortcode('portal_login', 'portal_login_link');
+
 
 /**
  * Currently plugin version.
