@@ -135,9 +135,11 @@ if ( !function_exists('wp_authenticate') ) :
     }
 endif;
 
+// https://www.idcwin.ca/cms/login?site=idcwin&redirect=%2Fsites%2Fidcwin%2Fhome%2Fnews.html&failureRedirect=%2Fsites%2Fidcwin%2Fhome%2Flogin-failed.html&wsHost=www&wsDomain=mgainvestmentservices.com&wsProtocol=https&wfmGroupName=wfmAdvisor&idcGroupName=idcwinAdvisor&wsiGroupName=wsiAdvisor&doRemoteJBossLoginFunctionString=true&doRemoteEWMSLoginFunctionString=true&remoteJBossDomain=CCWEIP01v%3A8080&remoteJBossProtocol=http&currentSiteName=idcwin&username=KERUWE&password=Insurance1
+
 function portal_login_link() {
     $user = wp_get_current_user();
-    return 'https://idcwin.ca/cms/login?username=' . $user->user_login . '&password=' . get_user_meta($user->ID, '_portal_pw', true); ;
+    return 'https://www.idcwin.ca/cms/login?site=idcwin&redirect=%2Fsites%2Fidcwin%2Fhome%2Fnews.html&failureRedirect=%2Fsites%2Fidcwin%2Fhome%2Flogin-failed.html&wsHost=www&wsDomain=mgainvestmentservices.com&wsProtocol=https&wfmGroupName=wfmAdvisor&idcGroupName=idcwinAdvisor&wsiGroupName=wsiAdvisor&doRemoteJBossLoginFunctionString=true&doRemoteEWMSLoginFunctionString=true&remoteJBossDomain=CCWEIP01v%3A8080&remoteJBossProtocol=http&currentSiteName=idcwin&username=' . $user->user_login . '&password=' . get_user_meta($user->ID, '_portal_pw', true);
 }
 add_shortcode('portal_login', 'portal_login_link');
 
@@ -153,7 +155,28 @@ add_action( 'parse_request', function( \WP $wp ) {
         wp_redirect(portal_login_link());
         exit;
     }
+    return;
 });
+
+// first of all let's set custom url settings
+add_filter( 'my_custom_urls', 'set_my_urls' );
+
+function my_first_content_callback() {
+    wp_redirect(portal_login_link());
+    exit;
+}
+
+function set_my_urls( $urls = array() ) {
+    $my_urls = array(
+        '/idcauth/portal' => [
+            'callback' => 'my_first_content_callback'
+        ]
+    );
+    return array_merge( (array) $urls, $my_urls );
+}
+require 'includes/MyCustomUrlParser.php';
+
+add_filter( 'do_parse_request', array( new MyCustomUrlParser, 'parse' ) );
 
 /**
  * Currently plugin version.

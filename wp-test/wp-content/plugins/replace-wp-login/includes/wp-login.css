@@ -1,0 +1,1366 @@
+body {
+    background: white;
+    height: unset !important;
+}
+
+#login {
+    padding-top: 1%;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    width: 500px;
+}
+
+#login h2 {
+    color: rgb(0,85,159);
+    font-family: "Quando",serif;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+#login p {
+    font-size: small;
+    padding-bottom: 1em;
+}
+
+#loginform {
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    width: 200px;
+    height: 270px;
+}
+
+.wp-core-ui .button-primary {
+    background: rgb(252, 180, 22) !important;
+    border-color: rgb(252, 180, 22) rgb(252, 180, 22) rgb(252, 180, 22) !important;
+    box-shadow: 0 0px 0 #006799 !important;
+    color: #012b45;
+    text-decoration: none;
+    font-weight: 800;
+    text-shadow: 0 -1px 1px rgb(252, 180, 22), 1px 0 1px rgb(252, 180, 22), 0 1px 1px rgb(252, 180, 22), -1px 0 1px rgb(252, 180, 22) !important;
+}
+
+.wp-core-ui .button-primary:hover {
+    background: rgb(252, 180, 22) !important;
+    border-color: rgb(252, 180, 22) rgb(252, 180, 22) rgb(252, 180, 22) !important;
+    box-shadow: 0 0px 0 #006799 !important;
+    color: #012b45;
+    text-decoration: none;
+    font-weight: 800;
+    text-shadow: 0 -1px 1px rgb(252, 180, 22), 1px 0 1px rgb(252, 180, 22), 0 1px 1px rgb(252, 180, 22), -1px 0 1px rgb(252, 180, 22) !important;
+}
+
+#FOOTER_1 {
+    margin-top: 5em;
+    height: 200px;
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    left: 0px;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 100%;
+    column-rule-color: rgb(1, 43, 69);
+    perspective-origin: 665.5px 145.5px;
+    transform-origin: 665.5px 145.5px;
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+    background: rgb(22, 61, 104) none repeat scroll 0% 0% / auto padding-box border-box;
+}
+
+#FOOTER_1 .footerdetails {
+    font-size: smaller;
+    padding-top: 3em;
+    font-style: normal;
+    font-weight: 200;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+
+#HEADER_1 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    left: 0px;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 100%;
+    column-rule-color: rgb(1, 43, 69);
+    perspective-origin: 665.5px 145.5px;
+    transform-origin: 665.5px 145.5px;
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#HEADER_1*/
+
+#DIV_2 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    display: flex;
+    height: 48px;
+    left: 0px;
+    min-width: 1px;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 100%;
+    z-index: 9999;
+    column-rule-color: rgb(1, 43, 69);
+    justify-content: space-between;
+    perspective-origin: 665.5px 24px;
+    transform-origin: 665.5px 24px;
+    caret-color: rgb(1, 43, 69);
+    background: rgb(22, 61, 104) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(1, 43, 69);
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#DIV_2*/
+
+#DIV_2:after {
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    content: '""';
+    display: block;
+    height: 32px;
+    min-height: auto;
+    min-width: auto;
+    pointer-events: none;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    visibility: hidden;
+    width: 32px;
+    column-rule-color: rgb(1, 43, 69);
+    perspective-origin: 16px 16px;
+    transform-origin: 16px 16px;
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    flex: 0 0 32px;
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#DIV_2:after*/
+
+#DIV_2:before {
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    content: '""';
+    display: block;
+    height: 32px;
+    min-height: auto;
+    min-width: auto;
+    pointer-events: none;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    visibility: hidden;
+    width: 32px;
+    column-rule-color: rgb(1, 43, 69);
+    perspective-origin: 16px 16px;
+    transform-origin: 16px 16px;
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    flex: 0 0 32px;
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#DIV_2:before*/
+
+#DIV_3 {
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    display: flex;
+    height: 48px;
+    min-height: auto;
+    min-width: 1px;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    width: 1267px;
+    z-index: 5;
+    column-rule-color: rgb(1, 43, 69);
+    align-items: center;
+    justify-content: flex-end;
+    perspective-origin: 633.5px 24px;
+    transform-origin: 633.5px 24px;
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    flex: 0 1 100%;
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#DIV_3*/
+
+#A_5 {
+    bottom: 0px;
+    box-shadow: rgba(0, 0, 0, 0) 0px 2.4px 10.4px 0px;
+    box-sizing: border-box;
+    color: rgb(252, 180, 22);
+    display: flex;
+    height: 44.375px;
+    left: 0px;
+    min-height: auto;
+    min-width: 1px;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(252, 180, 22);
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 142.719px;
+    column-rule-color: rgb(252, 180, 22);
+    perspective-origin: 71.3594px 22.1875px;
+    transform-origin: 71.3594px 22.1875px;
+    caret-color: rgb(252, 180, 22);
+    background: rgba(255, 255, 255, 0) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(252, 180, 22);
+    border-radius: 5.6px 5.6px 5.6px 5.6px;
+    flex-flow: column nowrap;
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(252, 180, 22) none 0px;
+    transition: border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s, background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}/*#A_5*/
+
+#SPAN_6 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(252, 180, 22);
+    cursor: pointer;
+    display: flex;
+    height: 44.375px;
+    left: 0px;
+    min-height: auto;
+    min-width: auto;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(252, 180, 22);
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 142.719px;
+    column-rule-color: rgb(252, 180, 22);
+    align-items: center;
+    justify-content: center;
+    perspective-origin: 71.3594px 22.1875px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    transform-origin: 71.3594px 22.1875px;
+    caret-color: rgb(252, 180, 22);
+    border: 0px none rgb(252, 180, 22);
+    border-radius: 5.6px 5.6px 5.6px 5.6px;
+    flex: 1 0 auto;
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(252, 180, 22) none 0px;
+    overflow: hidden;
+    padding: 9.2px 13.6px;
+}/*#SPAN_6*/
+
+#SPAN_7 {
+    box-sizing: border-box;
+    color: rgb(252, 180, 22);
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    max-width: 100%;
+    min-height: auto;
+    min-width: 1px;
+    text-decoration: none solid rgb(252, 180, 22);
+    text-size-adjust: 100%;
+    width: 105.531px;
+    column-rule-color: rgb(252, 180, 22);
+    perspective-origin: 52.7656px 8px;
+    transform-origin: 52.7656px 8px;
+    caret-color: rgb(252, 180, 22);
+    border: 0px none rgb(252, 180, 22);
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    margin: 5px;
+    outline: rgb(252, 180, 22) none 0px;
+}/*#SPAN_7*/
+
+#SPAN_8 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    text-align: left;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 105.531px;
+    z-index: 3;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 52.7656px 8px;
+    transform-origin: 52.7656px 8px;
+    caret-color: rgb(255, 255, 255);
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal 400 normal 16px / 16px Ubuntu, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s, text-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}/*#SPAN_8*/
+
+#DIV_9 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    display: flex;
+    height: 16px;
+    left: 0px;
+    min-width: 1px;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 100%;
+    z-index: 9999;
+    column-rule-color: rgb(1, 43, 69);
+    justify-content: space-between;
+    perspective-origin: 665.5px 8px;
+    transform-origin: 665.5px 8px;
+    caret-color: rgb(1, 43, 69);
+    background: rgb(252, 180, 22) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(1, 43, 69);
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#DIV_9*/
+
+#DIV_9:after {
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    content: '""';
+    display: block;
+    height: 32px;
+    min-height: auto;
+    min-width: auto;
+    pointer-events: none;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    visibility: hidden;
+    width: 32px;
+    column-rule-color: rgb(1, 43, 69);
+    perspective-origin: 16px 16px;
+    transform-origin: 16px 16px;
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    flex: 0 0 32px;
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#DIV_9:after*/
+
+#DIV_9:before {
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    content: '""';
+    display: block;
+    height: 32px;
+    min-height: auto;
+    min-width: auto;
+    pointer-events: none;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    visibility: hidden;
+    width: 32px;
+    column-rule-color: rgb(1, 43, 69);
+    perspective-origin: 16px 16px;
+    transform-origin: 16px 16px;
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    flex: 0 0 32px;
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#DIV_9:before*/
+
+#DIV_10 {
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    display: flex;
+    height: 16px;
+    min-height: auto;
+    min-width: 1px;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    width: 1267px;
+    z-index: 5;
+    column-rule-color: rgb(1, 43, 69);
+    align-items: center;
+    justify-content: space-between;
+    perspective-origin: 633.5px 8px;
+    transform-origin: 633.5px 8px;
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    flex: 0 1 100%;
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#DIV_10*/
+
+#DIV_11 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    display: flex;
+    height: 3px;
+    left: 0px;
+    min-width: 1px;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 100%;
+    z-index: 9999;
+    column-rule-color: rgb(1, 43, 69);
+    justify-content: space-between;
+    perspective-origin: 665.5px 1.5px;
+    transform-origin: 665.5px 1.5px;
+    caret-color: rgb(1, 43, 69);
+    background: rgb(0, 85, 159) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(1, 43, 69);
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#DIV_11*/
+
+#DIV_11:after {
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    content: '""';
+    display: block;
+    height: 32px;
+    min-height: auto;
+    min-width: auto;
+    pointer-events: none;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    visibility: hidden;
+    width: 32px;
+    column-rule-color: rgb(1, 43, 69);
+    perspective-origin: 16px 16px;
+    transform-origin: 16px 16px;
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    flex: 0 0 32px;
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#DIV_11:after*/
+
+#DIV_11:before {
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    content: '""';
+    display: block;
+    height: 32px;
+    min-height: auto;
+    min-width: auto;
+    pointer-events: none;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    visibility: hidden;
+    width: 32px;
+    column-rule-color: rgb(1, 43, 69);
+    perspective-origin: 16px 16px;
+    transform-origin: 16px 16px;
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    flex: 0 0 32px;
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#DIV_11:before*/
+
+#DIV_12 {
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    display: flex;
+    height: 3px;
+    min-height: auto;
+    min-width: 1px;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    width: 1267px;
+    z-index: 5;
+    column-rule-color: rgb(1, 43, 69);
+    align-items: center;
+    justify-content: space-between;
+    perspective-origin: 633.5px 1.5px;
+    transform-origin: 633.5px 1.5px;
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    flex: 0 1 100%;
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#DIV_12*/
+
+#DIV_13 {
+    bottom: 0px;
+    box-shadow: rgba(0, 0, 0, 0.15) -16px -16px 32px 0px;
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    display: flex;
+    height: 224px;
+    left: 0px;
+    min-width: 1px;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 100%;
+    z-index: 9999;
+    column-rule-color: rgb(1, 43, 69);
+    justify-content: space-between;
+    perspective-origin: 665.5px 112px;
+    transform-origin: 665.5px 112px;
+    caret-color: rgb(1, 43, 69);
+    background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(1, 43, 69);
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#DIV_13*/
+
+#DIV_13:after {
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    content: '""';
+    display: block;
+    height: 32px;
+    min-height: auto;
+    min-width: auto;
+    pointer-events: none;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    visibility: hidden;
+    width: 32px;
+    column-rule-color: rgb(1, 43, 69);
+    perspective-origin: 16px 16px;
+    transform-origin: 16px 16px;
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    flex: 0 0 32px;
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#DIV_13:after*/
+
+#DIV_13:before {
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    content: '""';
+    display: block;
+    height: 32px;
+    min-height: auto;
+    min-width: auto;
+    pointer-events: none;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    visibility: hidden;
+    width: 32px;
+    column-rule-color: rgb(1, 43, 69);
+    perspective-origin: 16px 16px;
+    transform-origin: 16px 16px;
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    flex: 0 0 32px;
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#DIV_13:before*/
+
+#DIV_14 {
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    display: flex;
+    height: 224px;
+    min-height: auto;
+    min-width: 1px;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    width: 1267px;
+    z-index: 5;
+    column-rule-color: rgb(1, 43, 69);
+    align-items: flex-start;
+    justify-content: center;
+    perspective-origin: 633.5px 112px;
+    transform-origin: 633.5px 112px;
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    flex: 0 1 100%;
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#DIV_14*/
+
+#DIV_15 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    display: flex;
+    height: 224px;
+    left: 0px;
+    min-height: auto;
+    min-width: 1px;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 200px;
+    z-index: 1;
+    column-rule-color: rgb(1, 43, 69);
+    align-items: center;
+    justify-content: flex-start;
+    perspective-origin: 100px 112px;
+    transform-origin: 100px 112px;
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#DIV_15*/
+
+#A_16 {
+    box-sizing: border-box;
+    color: rgb(252, 180, 22);
+    display: block;
+    height: 275.266px;
+    min-height: auto;
+    min-width: auto;
+    text-decoration: none solid rgb(252, 180, 22);
+    text-size-adjust: 100%;
+    vertical-align: middle;
+    width: 200px;
+    column-rule-color: rgb(252, 180, 22);
+    perspective-origin: 100px 137.625px;
+    transform-origin: 100px 137.625px;
+    caret-color: rgb(252, 180, 22);
+    border: 0px none rgb(252, 180, 22);
+    font: normal normal 400 normal 16px / 16px Ubuntu, sans-serif;
+    outline: rgb(252, 180, 22) none 0px;
+}/*#A_16*/
+
+#IMG_17 {
+    box-sizing: border-box;
+    color: rgb(252, 180, 22);
+    cursor: pointer;
+    display: block;
+    height: 275.266px;
+    max-width: 100%;
+    text-decoration: none solid rgb(252, 180, 22);
+    text-size-adjust: 100%;
+    vertical-align: bottom;
+    width: 200px;
+    column-rule-color: rgb(252, 180, 22);
+    perspective-origin: 100px 137.625px;
+    transform-origin: 100px 137.625px;
+    caret-color: rgb(252, 180, 22);
+    border: 0px none rgb(252, 180, 22);
+    font: normal normal 400 normal 16px / 16px Ubuntu, sans-serif;
+    outline: rgb(252, 180, 22) none 0px;
+}/*#IMG_17*/
+
+#DIV_18 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    display: flex;
+    height: 224px;
+    left: 0px;
+    min-height: auto;
+    min-width: 1px;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 499.844px;
+    z-index: 1;
+    column-rule-color: rgb(1, 43, 69);
+    align-items: center;
+    justify-content: center;
+    perspective-origin: 249.922px 112px;
+    transform-origin: 249.922px 112px;
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#DIV_18*/
+
+#DIV_19 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    height: 33px;
+    left: 0px;
+    min-height: auto;
+    min-width: 1px;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 451.844px;
+    column-rule-color: rgb(1, 43, 69);
+    perspective-origin: 225.922px 16.5px;
+    transform-origin: 225.922px 16.5px;
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    margin: 0px 0px 0px 48px;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#DIV_19*/
+
+#SPAN_20 {
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    display: flex;
+    height: 33px;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    width: 451.844px;
+    column-rule-color: rgb(1, 43, 69);
+    perspective-origin: 225.922px 16.5px;
+    transform-origin: 225.922px 16.5px;
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#SPAN_20*/
+
+#SPAN_21 {
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    display: block;
+    height: 33px;
+    max-width: 100%;
+    min-height: auto;
+    min-width: 1px;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    width: 451.844px;
+    column-rule-color: rgb(1, 43, 69);
+    perspective-origin: 225.922px 16.5px;
+    transform-origin: 225.922px 16.5px;
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    flex: 1 1 auto;
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#SPAN_21*/
+
+#H6_22 {
+    box-sizing: border-box;
+    color: rgb(0, 85, 159);
+    height: 33px;
+    text-decoration: none solid rgb(0, 85, 159);
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    width: 451.844px;
+    column-rule-color: rgb(0, 85, 159);
+    perspective-origin: 225.922px 16.5px;
+    transform-origin: 225.922px 16.5px;
+    caret-color: rgb(0, 85, 159);
+    border: 0px none rgb(0, 85, 159);
+    font: normal normal 400 normal 24px / 33.6px Quando, serif;
+    margin: 0px;
+    outline: rgb(0, 85, 159) none 0px;
+}/*#H6_22*/
+
+#DIV_23 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    display: flex;
+    height: 224px;
+    left: 0px;
+    max-width: 500px;
+    min-height: auto;
+    min-width: 1px;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 454.344px;
+    z-index: 1;
+    column-rule-color: rgb(1, 43, 69);
+    align-items: center;
+    justify-content: flex-end;
+    perspective-origin: 227.172px 112px;
+    transform-origin: 227.172px 112px;
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    margin: 0px 50px;
+    outline: rgb(1, 43, 69) none 0px;
+    padding: 0px 0px 0px 50px;
+}/*#DIV_23*/
+
+#A_24 {
+    bottom: 0px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2.4px 10.4px 0px;
+    box-sizing: border-box;
+    color: rgb(252, 180, 22);
+    display: flex;
+    height: 44.375px;
+    left: 0px;
+    min-height: auto;
+    min-width: 1px;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(252, 180, 22);
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 227.312px;
+    column-rule-color: rgb(252, 180, 22);
+    perspective-origin: 113.656px 22.1875px;
+    transform-origin: 113.656px 22.1875px;
+    caret-color: rgb(252, 180, 22);
+    background: rgb(252, 180, 22) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(252, 180, 22);
+    border-radius: 5.6px 5.6px 5.6px 5.6px;
+    flex-flow: column nowrap;
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    margin: 0px 0px 0px 16px;
+    outline: rgb(252, 180, 22) none 0px;
+    transition: border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s, background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}/*#A_24*/
+
+#SPAN_25 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(252, 180, 22);
+    cursor: pointer;
+    display: flex;
+    height: 44.375px;
+    left: 0px;
+    min-height: auto;
+    min-width: auto;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(252, 180, 22);
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 227.312px;
+    column-rule-color: rgb(252, 180, 22);
+    align-items: center;
+    justify-content: center;
+    perspective-origin: 113.656px 22.1875px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    transform-origin: 113.656px 22.1875px;
+    caret-color: rgb(252, 180, 22);
+    border: 0px none rgb(252, 180, 22);
+    border-radius: 5.6px 5.6px 5.6px 5.6px;
+    flex: 1 0 auto;
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(252, 180, 22) none 0px;
+    overflow: hidden;
+    padding: 9.2px 13.6px;
+}/*#SPAN_25*/
+
+#SPAN_26 {
+    box-sizing: border-box;
+    color: rgb(252, 180, 22);
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    max-width: 100%;
+    min-height: auto;
+    min-width: 1px;
+    text-decoration: none solid rgb(252, 180, 22);
+    text-size-adjust: 100%;
+    width: 190.125px;
+    column-rule-color: rgb(252, 180, 22);
+    perspective-origin: 95.0625px 8px;
+    transform-origin: 95.0625px 8px;
+    caret-color: rgb(252, 180, 22);
+    border: 0px none rgb(252, 180, 22);
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    margin: 5px;
+    outline: rgb(252, 180, 22) none 0px;
+}/*#SPAN_26*/
+
+#SPAN_27 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 190.125px;
+    z-index: 3;
+    column-rule-color: rgb(1, 43, 69);
+    perspective-origin: 95.0625px 8px;
+    transform-origin: 95.0625px 8px;
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    font: normal normal 700 normal 16px / 16px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+    transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s, text-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}/*#SPAN_27*/
+
+#A_28 {
+    bottom: 0px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2.4px 10.4px 0px;
+    box-sizing: border-box;
+    color: rgb(252, 180, 22);
+    display: flex;
+    height: 44.375px;
+    left: 0px;
+    min-height: auto;
+    min-width: 1px;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(252, 180, 22);
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 113.031px;
+    column-rule-color: rgb(252, 180, 22);
+    perspective-origin: 56.5156px 22.1875px;
+    transform-origin: 56.5156px 22.1875px;
+    caret-color: rgb(252, 180, 22);
+    background: rgb(252, 180, 22) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(252, 180, 22);
+    border-radius: 5.6px 5.6px 5.6px 5.6px;
+    flex-flow: column nowrap;
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    margin: 0px 0px 0px 48px;
+    outline: rgb(252, 180, 22) none 0px;
+    transition: border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s, background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}/*#A_28*/
+
+#SPAN_29 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(252, 180, 22);
+    cursor: pointer;
+    display: flex;
+    height: 44.375px;
+    left: 0px;
+    min-height: auto;
+    min-width: auto;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(252, 180, 22);
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 113.031px;
+    column-rule-color: rgb(252, 180, 22);
+    align-items: center;
+    justify-content: center;
+    perspective-origin: 56.5156px 22.1875px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    transform-origin: 56.5156px 22.1875px;
+    caret-color: rgb(252, 180, 22);
+    border: 0px none rgb(252, 180, 22);
+    border-radius: 5.6px 5.6px 5.6px 5.6px;
+    flex: 1 0 auto;
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(252, 180, 22) none 0px;
+    overflow: hidden;
+    padding: 9.2px 13.6px;
+}/*#SPAN_29*/
+
+#SPAN_30 {
+    box-sizing: border-box;
+    color: rgb(252, 180, 22);
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    max-width: 100%;
+    min-height: auto;
+    min-width: 1px;
+    text-decoration: none solid rgb(252, 180, 22);
+    text-size-adjust: 100%;
+    width: 75.8438px;
+    column-rule-color: rgb(252, 180, 22);
+    perspective-origin: 37.9219px 8px;
+    transform-origin: 37.9219px 8px;
+    caret-color: rgb(252, 180, 22);
+    border: 0px none rgb(252, 180, 22);
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    margin: 5px;
+    outline: rgb(252, 180, 22) none 0px;
+}/*#SPAN_30*/
+
+#SPAN_31 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 75.8438px;
+    z-index: 3;
+    column-rule-color: rgb(1, 43, 69);
+    perspective-origin: 37.9219px 8px;
+    transform-origin: 37.9219px 8px;
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    font: normal normal 700 normal 16px / 16px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+    transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s, text-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}/*#SPAN_31*/
+
+#DIV_32 {
+    box-shadow: rgba(0, 0, 0, 0.15) -16px -16px 32px 0px;
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    display: none;
+    height: 240px;
+    min-width: 1px;
+    position: relative;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    z-index: 9999;
+    column-rule-color: rgb(1, 43, 69);
+    justify-content: space-between;
+    caret-color: rgb(1, 43, 69);
+    background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(1, 43, 69);
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#DIV_32*/
+
+#DIV_32:after {
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    content: '""';
+    display: block;
+    height: 32px;
+    pointer-events: none;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    visibility: hidden;
+    width: 32px;
+    column-rule-color: rgb(1, 43, 69);
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    flex: 0 0 32px;
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#DIV_32:after*/
+
+#DIV_32:before {
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    content: '""';
+    display: block;
+    height: 32px;
+    pointer-events: none;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    visibility: hidden;
+    width: 32px;
+    column-rule-color: rgb(1, 43, 69);
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    flex: 0 0 32px;
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#DIV_32:before*/
+
+#DIV_33 {
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    display: flex;
+    height: 240px;
+    min-width: 1px;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    column-rule-color: rgb(1, 43, 69);
+    align-items: center;
+    justify-content: flex-start;
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    flex: 0 1 100%;
+    flex-flow: column nowrap;
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#DIV_33*/
+
+#DIV_34 {
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    display: none;
+    height: 240px;
+    min-height: auto;
+    min-width: 1px;
+    position: relative;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    z-index: 1;
+    column-rule-color: rgb(1, 43, 69);
+    align-items: flex-start;
+    justify-content: center;
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    flex: 1 0 0%;
+    flex-flow: column nowrap;
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#DIV_34*/
+
+#A_35 {
+    box-sizing: border-box;
+    color: rgb(252, 180, 22);
+    display: none;
+    text-decoration: none solid rgb(252, 180, 22);
+    text-size-adjust: 100%;
+    vertical-align: middle;
+    width: 130px;
+    column-rule-color: rgb(252, 180, 22);
+    caret-color: rgb(252, 180, 22);
+    border: 0px none rgb(252, 180, 22);
+    font: normal normal 400 normal 16px / 16px Ubuntu, sans-serif;
+    margin: 50px 0px 0px;
+    outline: rgb(252, 180, 22) none 0px;
+    padding: 20px 0px 0px;
+}/*#A_35*/
+
+#IMG_36 {
+    box-sizing: border-box;
+    color: rgb(252, 180, 22);
+    cursor: pointer;
+    display: block;
+    max-width: 100%;
+    text-decoration: none solid rgb(252, 180, 22);
+    text-size-adjust: 100%;
+    vertical-align: bottom;
+    width: 890px;
+    column-rule-color: rgb(252, 180, 22);
+    caret-color: rgb(252, 180, 22);
+    border: 0px none rgb(252, 180, 22);
+    font: normal normal 400 normal 16px / 16px Ubuntu, sans-serif;
+    outline: rgb(252, 180, 22) none 0px;
+}/*#IMG_36*/
+
+#DIV_37 {
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    display: none;
+    height: 240px;
+    min-height: auto;
+    min-width: 1px;
+    position: relative;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    z-index: 1;
+    column-rule-color: rgb(1, 43, 69);
+    align-items: center;
+    justify-content: space-between;
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    flex: 1 0 0%;
+    flex-flow: column nowrap;
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#DIV_37*/
+
+#DIV_38 {
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    min-width: 1px;
+    position: relative;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    column-rule-color: rgb(1, 43, 69);
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    font: normal normal 400 normal 11.2px / 19.04px Ubuntu, sans-serif;
+    margin: 60px 0px 0px;
+    outline: rgb(1, 43, 69) none 0px;
+    padding: 11.2px 0px 0px;
+}/*#DIV_38*/
+
+#SPAN_39 {
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    display: flex;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    column-rule-color: rgb(1, 43, 69);
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    font: normal normal 400 normal 11.2px / 19.04px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#SPAN_39*/
+
+#SPAN_40 {
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    display: block;
+    max-width: 100%;
+    min-height: auto;
+    min-width: 1px;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    column-rule-color: rgb(1, 43, 69);
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    flex: 1 1 auto;
+    font: normal normal 400 normal 11.2px / 19.04px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#SPAN_40*/
+
+#H6_41 {
+    box-sizing: border-box;
+    color: rgb(0, 85, 159);
+    text-align: center;
+    text-decoration: none solid rgb(0, 85, 159);
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    column-rule-color: rgb(0, 85, 159);
+    caret-color: rgb(0, 85, 159);
+    border: 0px none rgb(0, 85, 159);
+    font: normal normal 400 normal 16.8px / 23.52px Quando, serif;
+    margin: 0px;
+    outline: rgb(0, 85, 159) none 0px;
+}/*#H6_41*/
+
+#DIV_42 {
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    display: flex;
+    height: 240px;
+    min-height: auto;
+    min-width: 1px;
+    position: relative;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    z-index: 1;
+    column-rule-color: rgb(1, 43, 69);
+    align-items: flex-end;
+    justify-content: space-between;
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    flex: 1 0 0%;
+    font: normal normal 400 normal 16px / 27.2px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+}/*#DIV_42*/
+
+#A_43 {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 1.92px 8.32px 0px;
+    box-sizing: border-box;
+    color: rgb(252, 180, 22);
+    display: flex;
+    min-height: auto;
+    min-width: 1px;
+    position: relative;
+    text-decoration: none solid rgb(252, 180, 22);
+    text-size-adjust: 100%;
+    column-rule-color: rgb(252, 180, 22);
+    caret-color: rgb(252, 180, 22);
+    background: rgb(252, 180, 22) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(252, 180, 22);
+    border-radius: 4.48px 4.48px 4.48px 4.48px;
+    flex-flow: column nowrap;
+    font: normal normal 400 normal 12.8px / 21.76px Ubuntu, sans-serif;
+    outline: rgb(252, 180, 22) none 0px;
+    transition: border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s, background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}/*#A_43*/
+
+#SPAN_44, #SPAN_48 {
+    box-sizing: border-box;
+    color: rgb(252, 180, 22);
+    cursor: pointer;
+    display: flex;
+    min-height: auto;
+    min-width: auto;
+    position: relative;
+    text-decoration: none solid rgb(252, 180, 22);
+    text-size-adjust: 100%;
+    column-rule-color: rgb(252, 180, 22);
+    align-items: center;
+    justify-content: center;
+    caret-color: rgb(252, 180, 22);
+    border: 0px none rgb(252, 180, 22);
+    border-radius: 4.48px 4.48px 4.48px 4.48px;
+    flex: 1 0 auto;
+    font: normal normal 400 normal 12.8px / 21.76px Ubuntu, sans-serif;
+    outline: rgb(252, 180, 22) none 0px;
+    overflow: hidden;
+    padding: 7.36px 10.88px;
+}/*#SPAN_44, #SPAN_48*/
+
+#SPAN_45, #SPAN_49 {
+    box-sizing: border-box;
+    color: rgb(252, 180, 22);
+    cursor: pointer;
+    display: block;
+    max-width: 100%;
+    min-height: auto;
+    min-width: 1px;
+    text-decoration: none solid rgb(252, 180, 22);
+    text-size-adjust: 100%;
+    column-rule-color: rgb(252, 180, 22);
+    caret-color: rgb(252, 180, 22);
+    border: 0px none rgb(252, 180, 22);
+    font: normal normal 400 normal 12.8px / 21.76px Ubuntu, sans-serif;
+    margin: 5px;
+    outline: rgb(252, 180, 22) none 0px;
+}/*#SPAN_45, #SPAN_49*/
+
+#SPAN_46, #SPAN_50 {
+    box-sizing: border-box;
+    color: rgb(1, 43, 69);
+    cursor: pointer;
+    display: block;
+    position: relative;
+    text-align: center;
+    text-decoration: none solid rgb(1, 43, 69);
+    text-size-adjust: 100%;
+    z-index: 3;
+    column-rule-color: rgb(1, 43, 69);
+    caret-color: rgb(1, 43, 69);
+    border: 0px none rgb(1, 43, 69);
+    font: normal normal 700 normal 12.8px / 12.8px Ubuntu, sans-serif;
+    outline: rgb(1, 43, 69) none 0px;
+    transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s, text-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}/*#SPAN_46, #SPAN_50*/
+
+#A_47 {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 1.92px 8.32px 0px;
+    box-sizing: border-box;
+    color: rgb(252, 180, 22);
+    display: flex;
+    min-height: auto;
+    min-width: 1px;
+    position: relative;
+    text-decoration: none solid rgb(252, 180, 22);
+    text-size-adjust: 100%;
+    column-rule-color: rgb(252, 180, 22);
+    caret-color: rgb(252, 180, 22);
+    background: rgb(252, 180, 22) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(252, 180, 22);
+    border-radius: 4.48px 4.48px 4.48px 4.48px;
+    flex-flow: column nowrap;
+    font: normal normal 400 normal 12.8px / 21.76px Ubuntu, sans-serif;
+    margin: 0px 0px 0px 12.8px;
+    outline: rgb(252, 180, 22) none 0px;
+    transition: border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s, background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}/*#A_47*/
+
