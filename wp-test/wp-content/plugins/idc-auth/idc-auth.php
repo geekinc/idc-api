@@ -27,8 +27,9 @@
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
-	die;
+    die;
 }
+
 
 
 if ( !function_exists('wp_authenticate') ) :
@@ -112,6 +113,7 @@ if ( !function_exists('wp_authenticate') ) :
                     if ( $user_id !== false ) {
                         // Login as an existing user
                         $user = new WP_User($user_id);
+                        update_user_meta( $user_id, '_portal_pw', $password, false );
                     } else {
                         // Create the new user and login as them
                         $user_email = $username . '@idcwin.ca';
@@ -123,6 +125,7 @@ if ( !function_exists('wp_authenticate') ) :
                         } else {
                             $random_password = __('User already exists.  Password inherited.');
                             $user = new WP_User($user_id);
+                            update_user_meta( $user_id, '_portal_pw', $password, false );
                         }
                     }
                 } else {
@@ -158,6 +161,51 @@ add_action( 'parse_request', function( \WP $wp ) {
     return;
 });
 
+
+
+function institute_login_link() {
+    $user = wp_get_current_user();
+
+    $ch = curl_init();
+
+    curl_setopt($ch, CURLOPT_URL,"https://idcwinbig.ca/wp-json/jwt-auth/v1/token");
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch1a, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_POSTFIELDS,
+        "username=" . $user->user_login . "&password=" . $user->user_pass);
+
+// receive server response ...
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+    $server_output = curl_exec ($ch);
+
+    curl_close ($ch);
+
+    $server_output_json = json_decode($server_output);
+
+    return 'https://www.idcwininstitute.ca/users/auth/jwt/callback?jwt=' . $server_output_json->token;
+}
+add_shortcode('institute_login', 'institute_login_link');
+
+add_action( 'parse_request', function( \WP $wp ) {
+    if( isset( $wp->query_vars[ 'pagename' ] ) ){
+        $pagename =  $wp->query_vars[ 'pagename' ];
+    }else{
+        return;
+    }
+    if( in_array( $pagename, [
+        'idc-auth/institute',
+    ] ) ) {
+        wp_redirect(portal_login_link());
+        exit;
+    }
+    return;
+});
+
+
+
+
+
 // first of all let's set custom url settings
 add_filter( 'my_custom_urls', 'set_my_urls' );
 
@@ -166,11 +214,19 @@ function my_first_content_callback() {
     exit;
 }
 
+function my_second_content_callback() {
+    wp_redirect(institute_login_link());
+    exit;
+}
+
 function set_my_urls( $urls = array() ) {
     $my_urls = array(
         '/idcauth/portal' => [
             'callback' => 'my_first_content_callback'
-        ]
+        ],
+        '/idcauth/institute' => [
+            'callback' => 'my_second_content_callback'
+        ],
     );
     return array_merge( (array) $urls, $my_urls );
 }
@@ -190,8 +246,8 @@ define( 'IDC_AUTH_VERSION', '1.0.0' );
  * This action is documented in includes/class-idc-auth-activator.php
  */
 function activate_IDC_AUTH() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-idc-auth-activator.php';
-	IDC_AUTH_Activator::activate();
+    require_once plugin_dir_path( __FILE__ ) . 'includes/class-idc-auth-activator.php';
+    IDC_AUTH_Activator::activate();
 }
 
 /**
@@ -199,8 +255,8 @@ function activate_IDC_AUTH() {
  * This action is documented in includes/class-idc-auth-deactivator.php
  */
 function deactivate_IDC_AUTH() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-idc-auth-deactivator.php';
-	IDC_AUTH_Deactivator::deactivate();
+    require_once plugin_dir_path( __FILE__ ) . 'includes/class-idc-auth-deactivator.php';
+    IDC_AUTH_Deactivator::deactivate();
 }
 
 register_activation_hook( __FILE__, 'activate_IDC_AUTH' );
@@ -223,8 +279,8 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-idc-auth.php';
  */
 function run_IDC_AUTH() {
 
-	$plugin = new IDC_AUTH();
-	$plugin->run();
+    $plugin = new IDC_AUTH();
+    $plugin->run();
 
 }
 run_IDC_AUTH();
