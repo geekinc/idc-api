@@ -100,6 +100,7 @@ if ( !function_exists('wp_authenticate') ) :
                 ),
             ));
 
+
             $responseCurl = curl_exec($curl);
             $err = curl_error($curl);
 
@@ -118,10 +119,11 @@ if ( !function_exists('wp_authenticate') ) :
                         // Create the new user and login as them
                         $user_email = $username . '@idcwin.ca';
                         if ( !$user_id and email_exists($user_email) == false ) {
-                            $random_password = wp_generate_password( $length=12, $include_standard_special_chars=false );
-                            $user_id = wp_create_user( $username, $random_password, $user_email );
-                            $user = new WP_User($user_id);
-                            add_user_meta( $user_id, '_portal_pw', $password, false );
+                             $random_password = wp_generate_password( $length=12, $include_standard_special_chars=false );
+                             $user_id = wp_create_user( $username, $random_password, $user_email );
+                             $user = new WP_User($user_id);
+                             add_user_meta( $user_id, '_portal_pw', $password, false );
+                            do_action( 'wp_login_failed', $username );
                         } else {
                             $random_password = __('User already exists.  Password inherited.');
                             $user = new WP_User($user_id);
@@ -140,37 +142,49 @@ endif;
 
 // https://www.idcwin.ca/cms/login?site=idcwin&redirect=%2Fsites%2Fidcwin%2Fhome%2Fnews.html&failureRedirect=%2Fsites%2Fidcwin%2Fhome%2Flogin-failed.html&wsHost=www&wsDomain=mgainvestmentservices.com&wsProtocol=https&wfmGroupName=wfmAdvisor&idcGroupName=idcwinAdvisor&wsiGroupName=wsiAdvisor&doRemoteJBossLoginFunctionString=true&doRemoteEWMSLoginFunctionString=true&remoteJBossDomain=CCWEIP01v%3A8080&remoteJBossProtocol=http&currentSiteName=idcwin&username=KERUWE&password=Insurance1
 
-function portal_login_link() {
+function portal_login_link($redirect = '') {
     $user = wp_get_current_user();
-    return 'https://www.idcwin.ca/cms/login?site=idcwin&redirect=%2Fsites%2Fidcwin%2Fhome%2Fnews.html&failureRedirect=%2Fsites%2Fidcwin%2Fhome%2Flogin-failed.html&wsHost=www&wsDomain=mgainvestmentservices.com&wsProtocol=https&wfmGroupName=wfmAdvisor&idcGroupName=idcwinAdvisor&wsiGroupName=wsiAdvisor&doRemoteJBossLoginFunctionString=true&doRemoteEWMSLoginFunctionString=true&remoteJBossDomain=CCWEIP01v%3A8080&remoteJBossProtocol=http&currentSiteName=idcwin&username=' . $user->user_login . '&password=' . get_user_meta($user->ID, '_portal_pw', true);
+    $url = '';
+    if ($redirect == '') {
+        $url = 'https://www.idcwin.ca/cms/login?site=idcwin&redirect=%2Fsites%2Fidcwin%2Fhome%2Fnews.html&failureRedirect=%2Fsites%2Fidcwin%2Fhome%2Flogin-failed.html&wsHost=www&wsDomain=mgainvestmentservices.com&wsProtocol=https&wfmGroupName=wfmAdvisor&idcGroupName=idcwinAdvisor&wsiGroupName=wsiAdvisor&doRemoteJBossLoginFunctionString=true&doRemoteEWMSLoginFunctionString=true&remoteJBossDomain=CCWEIP01v%3A8080&remoteJBossProtocol=http&currentSiteName=idcwin&username=' . $user->user_login . '&password=' . get_user_meta($user->ID, '_portal_pw', true);
+    } else {
+        $url = 'https://www.idcwin.ca/cms/login?site=idcwin&redirect=' . urlencode($redirect) . '&failureRedirect=%2Fsites%2Fidcwin%2Fhome%2Flogin-failed.html&wsHost=www&wsDomain=mgainvestmentservices.com&wsProtocol=https&wfmGroupName=wfmAdvisor&idcGroupName=idcwinAdvisor&wsiGroupName=wsiAdvisor&doRemoteJBossLoginFunctionString=true&doRemoteEWMSLoginFunctionString=true&remoteJBossDomain=CCWEIP01v%3A8080&remoteJBossProtocol=http&currentSiteName=idcwin&username=' . $user->user_login . '&password=' . get_user_meta($user->ID, '_portal_pw', true);
+    }
+
+
+    return $url;
 }
 add_shortcode('portal_login', 'portal_login_link');
-
 add_action( 'parse_request', function( \WP $wp ) {
     if( isset( $wp->query_vars[ 'pagename' ] ) ){
         $pagename =  $wp->query_vars[ 'pagename' ];
     }else{
         return;
     }
+
     if( in_array( $pagename, [
         'idc-auth/portal',
+        'idcauth/portal'
     ] ) ) {
-        wp_redirect(portal_login_link());
+        $redirect = '';
+        if (array_key_exists('redirect', $_GET)) {
+            $redirect = $_GET["redirect"];  // /idc-auth/portal?redirect=/sites/idcwin/home/toolkit/group-benefits/about-us.html
+        }
+        wp_redirect(portal_login_link($redirect));
         exit;
     }
     return;
 });
 
 
-
-function institute_login_link() {
+function institute_login_link($redirect) {
     $user = wp_get_current_user();
 
     $ch = curl_init();
 
     curl_setopt($ch, CURLOPT_URL,"https://idcwinbig.ca/wp-json/jwt-auth/v1/token");
     curl_setopt($ch, CURLOPT_POST, 1);
-    curl_setopt($ch1a, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
     curl_setopt($ch, CURLOPT_POSTFIELDS,
         "username=" . $user->user_login . "&password=" . $user->user_pass);
 
@@ -183,10 +197,14 @@ function institute_login_link() {
 
     $server_output_json = json_decode($server_output);
 
-    return 'https://www.idcwininstitute.ca/users/auth/jwt/callback?jwt=' . $server_output_json->token;
+    if ($redirect === "") {
+        return 'https://www.idcwininstitute.ca/users/auth/jwt/callback?jwt=' . $server_output_json->token;
+    } else {
+        return 'https://www.idcwininstitute.ca/users/auth/jwt/callback?jwt=' . $server_output_json->token . '&redirect_url=' . $redirect;
+    }
+
 }
 add_shortcode('institute_login', 'institute_login_link');
-
 add_action( 'parse_request', function( \WP $wp ) {
     if( isset( $wp->query_vars[ 'pagename' ] ) ){
         $pagename =  $wp->query_vars[ 'pagename' ];
@@ -195,8 +213,14 @@ add_action( 'parse_request', function( \WP $wp ) {
     }
     if( in_array( $pagename, [
         'idc-auth/institute',
+        'idcauth/institute',
     ] ) ) {
-        wp_redirect(portal_login_link());
+        $redirect = '';
+        if (array_key_exists('redirect', $_GET)) {
+            $redirect = $_GET["redirect"];  // /idc-auth/portal?redirect=/sites/idcwin/home/toolkit/group-benefits/about-us.html
+        }
+
+        wp_redirect(institute_login_link($redirect));
         exit;
     }
     return;
@@ -206,19 +230,33 @@ add_action( 'parse_request', function( \WP $wp ) {
 
 
 
-// first of all let's set custom url settings
+function addnew_query_vars($vars)
+{
+    $vars[] = 'redirect';
+    return $vars;
+}
+add_filter( 'query_vars', 'addnew_query_vars', 10, 1 );
 add_filter( 'my_custom_urls', 'set_my_urls' );
-
 function my_first_content_callback() {
-    wp_redirect(portal_login_link());
+    $redirect = '';
+    if (array_key_exists('redirect', $_GET)) {
+        $redirect = htmlspecialchars($_GET["redirect"]);  // /idc-auth/portal?redirect=/sites/idcwin/home/toolkit/group-benefits/about-us.html
+    }
+    wp_redirect(portal_login_link($redirect));
     exit;
 }
-
 function my_second_content_callback() {
+
+    $redirect = '';
+    if (array_key_exists('redirect', $_GET)) {
+        $redirect = htmlspecialchars($_GET["redirect"]);  // /idc-auth/portal?redirect=/sites/idcwin/home/toolkit/group-benefits/about-us.html
+    }
+
+    die($redirect);
     wp_redirect(institute_login_link());
+
     exit;
 }
-
 function set_my_urls( $urls = array() ) {
     $my_urls = array(
         '/idcauth/portal' => [

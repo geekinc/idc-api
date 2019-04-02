@@ -166,14 +166,34 @@ class Jwt_Auth_Public
         //     ),
         // );
 
-        $token = array(
-            'iss' => get_bloginfo('url'),
-            'iat' => $issuedAt,
-            'nbf' => $notBefore,
-            'exp' => $expire,
-            'email' => $user->user_email,
-            'name' => $user->user_nicename
-        );
+        if ($user->has_prop('website')) {
+            $token = array(
+                'iss' => get_bloginfo('url'),
+                'iat' => $issuedAt,
+                'nbf' => $notBefore,
+                'exp' => $expire,
+                'email' => $user->user_email,
+                'name' => $user->user_firstname . ' ' . $user->user_lastname . ' ' . $user->get('website')
+            );
+        } elseif ($user->has_prop('aim')) {
+            $token = array(
+                'iss' => get_bloginfo('url'),
+                'iat' => $issuedAt,
+                'nbf' => $notBefore,
+                'exp' => $expire,
+                'email' => $user->user_email,
+                'name' => $user->user_firstname . ' ' . $user->user_lastname . ' ' . $user->get('aim')
+            );
+        } else {
+            $token = array(
+                'iss' => get_bloginfo('url'),
+                'iat' => $issuedAt,
+                'nbf' => $notBefore,
+                'exp' => $expire,
+                'email' => $user->user_email,
+                'name' => $user->user_firstname . ' ' . $user->user_lastname
+            );
+        }
 
         /** Let the user modify the token data before the sign. */
         $token = JWT::encode(apply_filters('jwt_auth_token_before_sign', $token, $user), $secret_key);
